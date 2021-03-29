@@ -8,6 +8,9 @@ import SideNav from './navigation/sideNav';
 import Reports from './components/Reports/Reports';
 import Proposals from './components/Proposals/Proposals';
 import Contacts from './components/Contacts/Contacts';
+import Dashboard from './components/dashbord/Dashboard';
+
+import SignIn from './components/login/Login';
 
 const MOCK_DATA_PROPOSALS = [
   {
@@ -43,39 +46,49 @@ function App() {
   //   setProposals(MOCK_DATA_PROPOSALS);
   // }, [proposals]);
   return (
-    <BrowserRouter>
-      <SideNav />
-      <Switch>
-        {/* <Route exact path="/login" component={SignIn}></Route> */}
-        {/* <Route exact path="/home" component={Dashboard}></Route> */}
-        <Route exact path="/reports" component={Reports}></Route>
-        {/* <Route exact path="/contacts" component={Contacts}></Route> */}
-        <Route
-          exact
-          path="/projects"
-          render={(props) => (
-            <Projects
-              {...props}
-              setApprovedProposals={setApprovedProposals}
-              approvedProposals={approvedProposals}
-            />
-          )}
-        ></Route>
-        <Route
-          exact
-          path="/proposals"
-          render={(props) => (
-            <Proposals
-              {...props}
-              proposals={proposals}
-              setApprovedProposals={setApprovedProposals}
-              approvedProposals={approvedProposals}
-            />
-          )}
-        ></Route>
-        {/* <Route exact path="/activePolls" component={ActivePolls}></Route> */}
-      </Switch>
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <SideNav />
+        <Switch>
+          {/* <Route exact path="/login" component={SignIn}></Route> */}
+          {/* <Route exact path="/home" component={Dashboard}></Route> */}
+          <Route exact path="/reports" component={Reports}></Route>
+          {/* <Route exact path="/contacts" component={Contacts}></Route> */}
+          <Route
+            exact
+            path="/projects"
+            render={(props) => (
+              <Projects
+                {...props}
+                setApprovedProposals={setApprovedProposals}
+                approvedProposals={approvedProposals}
+              />
+            )}
+          ></Route>
+          <Route
+            exact
+            path="/proposals"
+            render={(props) => (
+              <Proposals
+                {...props}
+                proposals={proposals}
+                setApprovedProposals={setApprovedProposals}
+                approvedProposals={approvedProposals}
+              />
+            )}
+          ></Route>
+          {/* <Route exact path="/activePolls" component={ActivePolls}></Route> */}
+        </Switch>
+      </BrowserRouter>
+      <div className="App">
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/Login" component={SignIn}></Route>
+            <Route exact path="/Home" component={Dashboard}></Route>
+          </Switch>
+        </BrowserRouter>
+      </div>
+    </div>
   );
 }
 
