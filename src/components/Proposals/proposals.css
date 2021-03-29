@@ -1,0 +1,9 @@
+.proposal-container {
+  display: flex;
+  margin-left: 250px;
+}
+
+.header-text {
+  font-size: 45px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,38 @@
+.containerProjects {
+  display: flex;
+}
+
+.proposals-container {
+  width: 400px;
+}
+
+.proposal {
+  background-color: tomato;
+  height: 60px;
+  width: 250px;
+  margin-left: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  margin-top: 20px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.titleInput {
+  width: 20vw;
+}
+
+.descriptionInput {
+  width: 20vw;
+}
+
+.locationInput {
+  width: 20vw;
+}
