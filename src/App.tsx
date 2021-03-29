@@ -7,6 +7,7 @@ import Projects from './components/Projects/Projects';
 import SideNav from './navigation/sideNav';
 import Reports from './components/Reports/Reports';
 import Proposals from './components/Proposals/Proposals';
+import Contacts from './components/Contacts/Contacts';
 
 const MOCK_DATA_PROPOSALS = [
   {
@@ -48,6 +49,7 @@ function App() {
         {/* <Route exact path="/login" component={SignIn}></Route> */}
         {/* <Route exact path="/home" component={Dashboard}></Route> */}
         <Route exact path="/reports" component={Reports}></Route>
+        {/* <Route exact path="/contacts" component={Contacts}></Route> */}
         <Route
           exact
           path="/projects"
