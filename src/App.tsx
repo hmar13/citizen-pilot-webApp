@@ -35,6 +35,17 @@ const MOCK_DATA_PROPOSALS = [
     approved: false,
     userId: 3,
   },
+  {
+    title: 'Something something',
+    description:
+      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ',
+    image:
+      'https://image.freepik.com/free-photo/park-bench-nature_19-115455.jpg',
+    location: 'City Center',
+    votes: 30,
+    approved: true,
+    userId: 2,
+  },
 ];
 
 function App() {
