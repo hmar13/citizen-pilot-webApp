@@ -9,9 +9,12 @@ import Collapse from '@material-ui/core/Collapse';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import DraftsIcon from '@material-ui/icons/Drafts';
 import SendIcon from '@material-ui/icons/Send';
+import ReportProblemIcon from '@material-ui/icons/ReportProblem';
+import AssessmentIcon from '@material-ui/icons/Assessment';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import StarBorder from '@material-ui/icons/StarBorder';
+import { BrowserRouter, Link, Router } from 'react-router-dom';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -28,7 +31,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function NavList() {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
     setOpen(!open);
@@ -40,7 +43,7 @@ export default function NavList() {
       aria-labelledby="nested-list-subheader"
       subheader={
         <ListSubheader component="div" id="nested-list-subheader">
-          Nested List Items
+         Citizen Pilot
         </ListSubheader>
       }
       className={classes.root}
@@ -49,17 +52,22 @@ export default function NavList() {
         <ListItemIcon>
           <SendIcon />
         </ListItemIcon>
-        <ListItemText primary="Home" />
+        
+        <ListItemText primary="Home"/>
+       <Link to="/LogIn" />
+       
+
+       
       </ListItem>
       <ListItem button>
         <ListItemIcon>
-          <DraftsIcon />
+          <AssessmentIcon/>
         </ListItemIcon>
         <ListItemText primary="Reports" />
       </ListItem>
       <ListItem button>
         <ListItemIcon>
-          <DraftsIcon />
+          <ReportProblemIcon />
         </ListItemIcon>
         <ListItemText primary="Alerts" />
       </ListItem>
@@ -68,15 +76,15 @@ export default function NavList() {
           <InboxIcon />
         </ListItemIcon>
         <ListItemText primary="Proposals" />
-        {open ? <ExpandLess /> : <ExpandMore />}
+        {open ? <ExpandLess/> : <ExpandMore/>  }
       </ListItem>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
           <ListItem button className={classes.nested}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary="Starred" />
+            <ListItemText primary="Current Proposals" />
+          </ListItem>
+           <ListItem button className={classes.nested}>
+            <ListItemText primary="Active Polls" />
           </ListItem>
         </List>
       </Collapse>

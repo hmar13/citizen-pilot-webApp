@@ -10,10 +10,16 @@ import Typography from '@material-ui/core/Typography';
 import './DashButton.css'
 import ReportCard from './reportsButton';
 import Progressbar from './ProgressBar'
+import { Link } from 'react-router-dom';
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    
   },
+  img1: {
+    height: 200,
+    width:200
+  }
 });
 
 export default function DashButton() {
@@ -22,72 +28,52 @@ export default function DashButton() {
   return (
     <div className='buttonContainer'>
 
-      <div>
+    <div>
     <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          height="140"
-          image="../../../assets/warning.png"
-          title="first car"
-          />
+      <CardActionArea >
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-          </Typography>
+            <Typography gutterBottom variant="h5" component="h2">
+             Proposals   
+            </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             this area is for the lastest updates of something
           </Typography>
         </CardContent>
       </CardActionArea>
-
-      <CardActions>
-        <Button size="small" color="primary">
-         Newest Proposal
+          <CardActions>
+          <Link to='/LogIn'>   
+        <Button variant="contained" color="primary">
+                Newest Proposal
         </Button>
+      </Link>
       </CardActions>
       </Card>
         </div>
         <div>
       <Card className={classes.root}>
       <CardActionArea>
-        <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          height="140"
-          image="../../../assets/warning.png"
-          title="traffic report"
-          />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-           traffic
+           Traffic Reports
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-           review the lastes trffic and send out an alert
+           Review the lastest traffic and send out an alert!
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button variant="contained" color="primary">
         Send Alert
         </Button>
       </CardActions>
       </Card>
       </div>
-      <div>
-        
+      <div> 
       <Card className={classes.root}>
       <CardActionArea>
-        <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          height="140"
-          image="../../../assets/warning.png"
-          title="Weather warnings"
-          />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-           lastes Weather reports 
+           Lastest Weather reports 
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
            see the weather
@@ -95,44 +81,28 @@ export default function DashButton() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button variant="contained" color="primary">
          Send an Alert
         </Button>
       </CardActions>
       </Card>
         </div>
       <ReportCard/>
-      <div style={{ width: 250, height: 300 }}>
+      <div style={{ width: 290, height: 350 }}>
         <Progressbar />
       </div>
-        <div>
+        <div >
      <Card className={classes.root}>
       <CardActionArea>
-        <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          height="100"
-          image="../../../assets/warning.png"
-          title="Contemplative Reptile"
-        />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+           Polls
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+          Quick view to all active polls           
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
       </Card>
 
       </div>
