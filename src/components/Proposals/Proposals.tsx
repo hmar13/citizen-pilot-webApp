@@ -1,9 +1,12 @@
 import React, { SetStateAction } from 'react';
+
 import './proposals.css';
 import NewProposalTab from './ProposalTab/newProposalTab';
 import VotingProposalTab from './ProposalTab/votingProposalTab';
 import { proposal } from '../../types';
-
+import Divider from '@material-ui/core/Divider';
+import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
+import HowToVoteIcon from '@material-ui/icons/HowToVote';
 const MOCK_DATA = [
   {
     title: 'New Benches in the park',
@@ -41,27 +44,49 @@ const Proposals: React.FC<props> = ({
   approvedProposals,
 }) => {
   return (
-    <div className="proposal-container">
-      <div>
-        <div className="header-text">New Proposals</div>
-        {proposals
-          .filter((proposal) => !proposal.approved)
-          .map((proposal) => (
-            <NewProposalTab proposal={proposal} />
-          ))}
-      </div>
+    <div className="page">
+      <div className="proposal-container">
+        <div className="newProposalsContainer">
+          <div className="header-text">
+            <div style={{ display: 'flex' }}>
+              <EmojiObjectsIcon
+                fontSize="large"
+                style={{ marginTop: 9, marginRight: 10 }}
+              />
+              <div>New Proposals</div>
+            </div>
+            <Divider />
+          </div>
+          <div className="newProposals">
+            {proposals
+              .filter((proposal) => !proposal.approved)
+              .map((proposal) => (
+                <NewProposalTab proposal={proposal} />
+              ))}
+          </div>
+        </div>
 
-      <div>
-        <div className="header-text">Currently voted proposals</div>
-        {proposals
-          .filter((proposal) => proposal.approved)
-          .map((proposal) => (
-            <VotingProposalTab
-              proposal={proposal}
-              setApprovedProposals={setApprovedProposals}
-              approvedProposals={approvedProposals}
-            />
-          ))}
+        <div className="votingProposalContainer">
+          <div className="header-text">
+            <div style={{ display: 'flex' }}>
+              <HowToVoteIcon
+                fontSize="large"
+                style={{ marginTop: 9, marginRight: 10 }}
+              />
+              <div>Live proposals</div>
+            </div>
+            <Divider />
+          </div>
+          {proposals
+            .filter((proposal) => proposal.approved)
+            .map((proposal) => (
+              <VotingProposalTab
+                proposal={proposal}
+                setApprovedProposals={setApprovedProposals}
+                approvedProposals={approvedProposals}
+              />
+            ))}
+        </div>
       </div>
     </div>
   );

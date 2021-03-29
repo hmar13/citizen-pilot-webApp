@@ -9,6 +9,9 @@ import Reports from './components/Reports/Reports';
 import News from './components/News/News';
 import Proposals from './components/Proposals/Proposals';
 import Contacts from './components/Contacts/Contacts';
+import Dashboard from './components/dashbord/Dashboard';
+
+import SignIn from './components/login/Login';
 
 const MOCK_DATA_PROPOSALS = [
   {
