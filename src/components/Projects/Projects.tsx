@@ -1,4 +1,5 @@
 import React, { SetStateAction, useState } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import { proposal } from './../../types';
 import './projects.css';
 import TextField from '@material-ui/core/TextField';
@@ -8,11 +9,15 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-
+import IconButton from '@material-ui/core/IconButton';
+import CreateIcon from '@material-ui/icons/Create';
 type props = {
   setApprovedProposals: React.Dispatch<SetStateAction<proposal[]>>;
   approvedProposals: proposal[];
 };
+const useStyles = makeStyles({
+  pencilIcon: {},
+});
 
 const initalData = {
   title: '',
@@ -33,6 +38,7 @@ const Projects: React.FC<props> = ({
   setApprovedProposals,
 }) => {
   const [formValue, setFormValue] = useState(initalData);
+  const classes = useStyles();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -61,11 +67,9 @@ const Projects: React.FC<props> = ({
                 </Typography>
               </CardContent>
               <CardActions style={{ alignSelf: 'flex-end' }}>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  size="small"
-                  id="fill-button"
+                <IconButton
+                  className={classes.pencilIcon}
+                  aria-label="delete"
                   onClick={() => {
                     setFormValue({
                       title: proposal.title,
@@ -76,8 +80,8 @@ const Projects: React.FC<props> = ({
                     });
                   }}
                 >
-                  Fill
-                </Button>
+                  <CreateIcon fontSize="small" />
+                </IconButton>
               </CardActions>
             </Card>
           ))
