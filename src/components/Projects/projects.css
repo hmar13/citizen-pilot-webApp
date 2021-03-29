@@ -2,27 +2,31 @@
   display: flex;
 }
 
-.proposals-container {
-  width: 400px;
-}
+.card {
+  width: 20vw;
 
-.proposal {
-  background-color: tomato;
-  height: 60px;
-  width: 250px;
-  margin-left: 20px;
-  margin-top: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  margin-top: 30px;
+}
+.proposals-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  width: 400px;
+  color: white;
 }
 
 .form-container {
-  margin-top: 20px;
+  background-color: rgb(253, 252, 197);
+  width: 400px;
   height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
 .titleInput {
@@ -35,4 +39,20 @@
 
 .locationInput {
   width: 20vw;
+}
+
+.imageInput {
+  width: 20vw;
+}
+
+#submit-button {
+  padding-left: 0px;
+}
+
+#fill-button {
+  padding-left: 0px;
+}
+
+.paper {
+  margin-top: 30px;
 }

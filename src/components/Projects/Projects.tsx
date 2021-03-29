@@ -2,7 +2,12 @@ import React, { SetStateAction, useState } from 'react';
 import { proposal } from './../../types';
 import './projects.css';
 import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
 
 type props = {
   setApprovedProposals: React.Dispatch<SetStateAction<proposal[]>>;
@@ -49,81 +54,108 @@ const Projects: React.FC<props> = ({
       <div className="proposals-container">
         {approvedProposals ? (
           approvedProposals.map((proposal) => (
-            <div
-              className="proposal"
-              onClick={() => {
-                setFormValue({
-                  title: proposal.title,
-                  description: proposal.description,
-                  location: proposal.location,
-                  image: proposal.image,
-                  completion: 0,
-                });
-              }}
-            >
-              <div>{proposal.title}</div>
-            </div>
+            <Card className="card">
+              <CardContent style={{ textAlign: 'center' }}>
+                <Typography style={{ fontSize: '20px' }}>
+                  {proposal.title}
+                </Typography>
+              </CardContent>
+              <CardActions style={{ alignSelf: 'flex-end' }}>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="small"
+                  id="fill-button"
+                  onClick={() => {
+                    setFormValue({
+                      title: proposal.title,
+                      description: proposal.description,
+                      location: proposal.location,
+                      image: proposal.image,
+                      completion: 0,
+                    });
+                  }}
+                >
+                  Fill
+                </Button>
+              </CardActions>
+            </Card>
           ))
         ) : (
           <div>Loading</div>
         )}
       </div>
-      <div className="form-container">
-        <form onSubmit={handleSubmit}>
-          <div style={{ height: '10vh' }}>
-            <TextField
-              className="titleInput"
-              required
-              id="standard-basic"
-              label="Title"
-              name="title"
-              value={formValue.title}
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <TextField
-              className="descriptionInput"
-              required
-              id="outlined-required"
-              label="Description"
-              name="description"
-              value={formValue.description}
-              onChange={handleChange}
-              variant="outlined"
-              multiline
-              rows={7}
-            />
-          </div>
-          <div style={{ height: '10vh' }}>
-            <TextField
-              className="locationInput"
-              required
-              id="standard-basic"
-              label="Location"
-              name="location"
-              value={formValue.location}
-              onChange={handleChange}
-            />
-          </div>
+      <Paper variant="outlined" elevation={3} className="paper">
+        <div className="form-container">
+          <form onSubmit={handleSubmit}>
+            <div style={{ marginTop: '20px' }}>
+              <TextField
+                className="titleInput"
+                required
+                id="standard-basic"
+                label="Title"
+                name="title"
+                value={formValue.title}
+                onChange={handleChange}
+              />
+            </div>
+            <div style={{ marginTop: '30px' }}>
+              <TextField
+                className="descriptionInput"
+                required
+                id="outlined-required"
+                label="Description"
+                name="description"
+                value={formValue.description}
+                onChange={handleChange}
+                variant="outlined"
+                multiline
+                rows={7}
+              />
+            </div>
+            <div style={{ marginTop: '20px' }}>
+              <TextField
+                className="locationInput"
+                required
+                id="standard-basic"
+                label="Location"
+                name="location"
+                value={formValue.location}
+                onChange={handleChange}
+              />
+            </div>
+            <div style={{ marginTop: '30px' }}>
+              <TextField
+                className="imageInput"
+                required
+                id="standard-basic"
+                label="Image"
+                name="image"
+                value={formValue.image}
+                onChange={handleChange}
+              />
+            </div>
 
-          <div>Image</div>
-          <input
-            name="image"
-            value={formValue.image}
-            type="text"
-            onChange={handleChange}
-          ></input>
-          <div>Completion</div>
+            {/* <div>Completion</div>
           <input
             name="completion"
             value={formValue.completion}
             type="text"
             onChange={handleChange}
-          ></input>
-          <Button type="submit">Submit</Button>
-        </form>
-      </div>
+          ></input> */}
+            <div style={{ marginTop: '100px' }}>
+              <Button
+                id="submit-button"
+                variant="outlined"
+                color="primary"
+                type="submit"
+              >
+                Submit
+              </Button>
+            </div>
+          </form>
+        </div>
+      </Paper>
       <div className="projects-container"></div>
     </div>
   );
