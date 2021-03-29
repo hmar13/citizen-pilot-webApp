@@ -6,6 +6,7 @@ import { proposal } from './types';
 import Projects from './components/Projects/Projects';
 import SideNav from './navigation/sideNav';
 import Reports from './components/Reports/Reports';
+import News from './components/News/News';
 import Proposals from './components/Proposals/Proposals';
 import Contacts from './components/Contacts/Contacts';
 
@@ -71,6 +72,13 @@ function App() {
               setApprovedProposals={setApprovedProposals}
               approvedProposals={approvedProposals}
             />
+          )}
+        ></Route>
+        <Route
+          exact
+          path="/news"
+          render={(props) => (
+            <News />
           )}
         ></Route>
         {/* <Route exact path="/activePolls" component={ActivePolls}></Route> */}
