@@ -1,0 +1,51 @@
+.containerProjects {
+  display: flex;
+}
+
+.card {
+  width: 20vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
+}
+.proposals-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 400px;
+  color: white;
+}
+
+.form-container {
+  background-color: rgb(253, 252, 197);
+  width: 400px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleInput {
+  width: 20vw;
+}
+
+.descriptionInput {
+  width: 20vw;
+}
+
+.locationInput {
+  width: 20vw;
+}
+
+.imageInput {
+  width: 20vw;
+}
+
+.paper {
+  margin-top: 30px;
+  height: 80vh;
+}
