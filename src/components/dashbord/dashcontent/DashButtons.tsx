@@ -40,28 +40,28 @@ export default function DashButton() {
           </Typography>
         </CardContent>
       </CardActionArea>
-          <CardActions>
-          <Link to='/LogIn'>   
-        <Button variant="contained" color="primary">
-                Newest Proposal
-        </Button>
-      </Link>
+        <CardActions>
+        <Link to='/LogIn'>   
+          <Button variant="contained" color="primary">
+            Newest Proposal
+          </Button>
+        </Link>
       </CardActions>
       </Card>
         </div>
         <div>
       <Card className={classes.root}>
-      <CardActionArea>
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-           Traffic Reports
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-           Review the lastest traffic and send out an alert!
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
+        <CardActionArea>
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+            Traffic Reports
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+            Review the lastest traffic and send out an alert!
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
         <Button variant="contained" color="primary">
         Send Alert
         </Button>

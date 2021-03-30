@@ -15,6 +15,8 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import StarBorder from '@material-ui/icons/StarBorder';
 import { BrowserRouter, Link, Router } from 'react-router-dom';
+import { SidebarData } from './NavRoutes';
+import './DashNav.css'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -48,46 +50,24 @@ export default function NavList() {
       }
       className={classes.root}
     >
-      <ListItem button>
-        <ListItemIcon>
-          <SendIcon />
-        </ListItemIcon>
-        
-        <ListItemText primary="Home"/>
-       <Link to="/LogIn" />
-       
-
-       
-      </ListItem>
-      <ListItem button>
-        <ListItemIcon>
-          <AssessmentIcon/>
-        </ListItemIcon>
-        <ListItemText primary="Reports" />
-      </ListItem>
-      <ListItem button>
-        <ListItemIcon>
-          <ReportProblemIcon />
-        </ListItemIcon>
-        <ListItemText primary="Alerts" />
-      </ListItem>
-      <ListItem button onClick={handleClick}>
-        <ListItemIcon>
-          <InboxIcon />
-        </ListItemIcon>
-        <ListItemText primary="Proposals" />
-        {open ? <ExpandLess/> : <ExpandMore/>  }
-      </ListItem>
-      <Collapse in={open} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
-          <ListItem button className={classes.nested}>
-            <ListItemText primary="Current Proposals" />
-          </ListItem>
-           <ListItem button className={classes.nested}>
-            <ListItemText primary="Active Polls" />
-          </ListItem>
-        </List>
-      </Collapse>
+     <nav>
+          <ul className='sideNavList'>
+            <li className='navbar-toggle'>
+              <Link to='#' className='menu-bars'>
+              </Link>
+            </li>
+            {SidebarData.map((item, index) => {
+              return (
+                <li key={index} className={item.cName}>
+                  <Link to={item.path}>
+                    {item.icon}
+                    <span>{item.title}</span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
     </List>
   );
 }
