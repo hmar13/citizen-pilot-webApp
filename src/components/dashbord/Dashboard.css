@@ -1,11 +1,9 @@
-.dashContainer {
-  display: flex;
-  flex-flow: wrap row;
-  height: 100%;
-  width: 70%;
-  margin-left: 300px;
+.dash-container {
+  margin-top: -60px;
+  margin-left: 250px;
+  background-color: #F4F7FA;
+  height: 100vh;
 }
-
 #topItems {
   display: flex;
   flex-direction: column;
@@ -19,3 +17,4 @@
   flex-flow: wrap;
   height: 900px;
 }
+
