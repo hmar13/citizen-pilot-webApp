@@ -23,7 +23,6 @@ const MOCKDATA = [
     description: 'River is blue',
     latitude: 44.81655677954322,
     longitude: 20.44972249719375,
-
     urgency: false,
     image:
       'https://restorationmasterfinder.com/restoration/wp-content/uploads/2017/05/flooded-apartment-portland-or.jpg',

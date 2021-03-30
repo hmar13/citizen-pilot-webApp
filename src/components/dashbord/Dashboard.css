@@ -1,9 +1,32 @@
+.banner {
+  height: 80px;
+  width: 2000px;
+  background-color: lightgrey;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
 .dash-container {
-  margin-top: -60px;
-  margin-left: 220px;
+  margin-right: 10px;
+  margin-left: 10px;
   background-color: #f4f7fa;
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.content-container {
+  background-color: #f4f7fa;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.top-container {
+  flex-direction: row;
 }

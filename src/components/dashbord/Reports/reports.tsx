@@ -14,13 +14,11 @@ const MOCKDATA = [
     Lname: 'Bench',
     email: 'corona@gmail.com',
   },
-
   {
     category: 'environment',
     description: 'River is blue',
     latitude: 44.81655677954322,
     longitude: 20.44972249719375,
-
     urgency: false,
     image:
       'https://restorationmasterfinder.com/restoration/wp-content/uploads/2017/05/flooded-apartment-portland-or.jpg',
@@ -28,7 +26,6 @@ const MOCKDATA = [
     Lname: 'Ozzie',
     email: 'haydn@gmail.com',
   },
-
   {
     category: 'transport',
     description: 'There is a big hole in the road. Street number 5.',

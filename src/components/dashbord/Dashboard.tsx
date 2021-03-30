@@ -1,10 +1,3 @@
-import React from 'react';
-import {
-  makeStyles,
-  useTheme,
-  Theme,
-  createStyles,
-} from '@material-ui/core/styles';
 import './Dashboard.css';
 
 import ProposalCard from './Proposals/Proposals';
@@ -21,12 +14,20 @@ import LiveProposals from './LiveProposals/liveProposals';
 export default function Dashboard() {
   return (
     <div className="dash-container">
-      <ReportTab />
-      <ProjectTab />
-      <LiveProposals />
-      <NewsComponent />
-      <ContactsComponent />
-      <ProposalCard />
+      <div className="banner">
+      </div>
+      <div className="content-container">
+
+        <NewsComponent />
+        <ProposalCard />
+        <ContactsComponent />
+        <ReportTab />
+
+
+        <ProjectTab />
+        <LiveProposals />
+
+      </div>
     </div>
   );
 }

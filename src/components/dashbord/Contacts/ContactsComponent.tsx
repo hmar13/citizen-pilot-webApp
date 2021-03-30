@@ -43,7 +43,11 @@ const contacts = [
 
 const useStyles = makeStyles((theme) => ({
   list: {
-    width: 350,
+    width: 380,
+  },
+  button: {
+    padding: 0,
+    width: 50,
   },
   headerDiv: {
     display: 'flex',
@@ -91,6 +95,7 @@ export default function ProposalCard() {
               onClick={handleClick}
               edge="end"
               size="small"
+              className={classes.button}
             >
               <MoreVertIcon />
             </IconButton >

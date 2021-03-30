@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   height: 70px;
-  width: 570px;
+  width: 490px;
 }
 
 .project-images {
@@ -21,7 +21,7 @@ img {
 }
 
 .title-description {
-  width: 320px;
+  width: 300px;
   font-size: 15px;
   color: #111;
   font-weight: 400;
@@ -38,5 +38,5 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 30px;
+  margin-left: 50px;
 }
