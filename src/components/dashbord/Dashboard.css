@@ -1,5 +1,9 @@
-#sidenav {
-  margin: 0;
+.dashContainer {
+  display: flex;
+  flex-flow: wrap row;
+  height: 100%;
+  width: 70%;
+  margin-left: 300px;
 }
 
 #topItems {
