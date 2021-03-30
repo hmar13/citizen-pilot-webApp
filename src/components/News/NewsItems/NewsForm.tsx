@@ -51,70 +51,73 @@ export default function NewsForm({
       <Typography variant="h6" gutterBottom>
         Add your news
       </Typography>
-      <Grid container spacing={3}>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            onChange={handleTitleChange}
-            id="title"
-            name="title"
-            label="Title"
-            fullWidth
-            autoComplete="title"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            id="category"
-            select
-            label="Category"
-            value={selectedCategory}
-            onChange={handleCategoryChange}
-            required
-            name="category"
-            fullWidth
-          >
-            {category.map((option) => (
-              <MenuItem key={option.value} value={option.value}>
-                {option.value}
-              </MenuItem>
-            ))}
+      <form>
 
-          </TextField>
-        </Grid>
-        <Grid item xs={12}>
-          <TextField
-            required
-            multiline
-            onChange={handleDescriptionChange}
-            id="description"
-            name="description"
-            label="Add a detailed description"
-            fullWidth
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <TextField
-            required
-            onChange={handleLocationChange}
-            id="location"
-            name="address"
-            label="Location"
-            fullWidth
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              required
+              onChange={handleTitleChange}
+              id="title"
+              name="title"
+              label="Title"
+              fullWidth
+              autoComplete="title"
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              id="category"
+              select
+              label="Category"
+              value={selectedCategory}
+              onChange={handleCategoryChange}
+              required
+              name="category"
+              fullWidth
+            >
+              {category.map((option) => (
+                <MenuItem key={option.value} value={option.value}>
+                  {option.value}
+                </MenuItem>
+              ))}
 
-          />
+            </TextField>
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              required
+              multiline
+              onChange={handleDescriptionChange}
+              id="description"
+              name="description"
+              label="Add a detailed description"
+              fullWidth
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              required
+              onChange={handleLocationChange}
+              id="location"
+              name="address"
+              label="Location"
+              fullWidth
+
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              required
+              onChange={handleDateChange}
+              id="Date"
+              name="date"
+              label="Date"
+              fullWidth
+            />
+          </Grid>
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            onChange={handleDateChange}
-            id="Date"
-            name="date"
-            label="Date"
-            fullWidth
-          />
-        </Grid>
-      </Grid>
+      </form>
     </React.Fragment>
   );
 }

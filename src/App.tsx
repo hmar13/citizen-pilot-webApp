@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { proposal } from './types';
@@ -49,7 +49,7 @@ const MOCK_DATA_PROPOSALS = [
 ];
 
 function App() {
-  const [proposals, setProposals] = useState(MOCK_DATA_PROPOSALS);
+  const [proposals] = useState(MOCK_DATA_PROPOSALS);
   const [approvedProposals, setApprovedProposals] = useState<proposal[] | []>(
     []
   );
@@ -59,7 +59,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <SideNav/>
+        <SideNav />
         <Switch>
           <Route exact path="/reports" component={Reports}></Route>
           <Route exact path="/news" component={News}></Route>
@@ -87,8 +87,8 @@ function App() {
               />
             )}
           ></Route>
-            <Route exact path="/Login" component={SignIn}></Route>
-            <Route exact path="/Home" component={Dashboard}></Route>
+          <Route exact path="/Login" component={SignIn}></Route>
+          <Route exact path="/Home" component={Dashboard}></Route>
         </Switch>
       </BrowserRouter>
       <div className="App">
