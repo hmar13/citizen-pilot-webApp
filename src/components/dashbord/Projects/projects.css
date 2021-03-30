@@ -1,11 +1,12 @@
-.Report-tab {
+.Project-Tab {
   margin-left: 30px;
   background-color: #fff;
   width: 600px;
   font-family: 'Open Sans', sans-serif;
   color: black;
 }
-.Report-tab-header-text-containter {
+
+.Project-tab-header-text-containter {
   border-bottom: 1px solid #f1f1f1;
   display: flex;
   align-items: center;
@@ -14,12 +15,12 @@
   font-size: 17px;
   font-weight: 400;
 }
-.Report-tab-header-text {
+.Project-tab-header-text {
   margin-left: 20px;
 }
 
-.blue-color-box {
-  background-color: #04a9f5;
+.red-color-box {
+  background-color: #f44236;
   width: 4px;
   height: 20px;
 }

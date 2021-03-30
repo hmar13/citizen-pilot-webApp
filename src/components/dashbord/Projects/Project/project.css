@@ -1,0 +1,42 @@
+.project-box {
+  margin-left: 30px;
+  border-bottom: 1px solid #f1f1f1;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 570px;
+}
+
+.project-images {
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+img {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+}
+
+.title-description {
+  width: 320px;
+  font-size: 15px;
+  color: #111;
+  font-weight: 400;
+}
+
+.progress-description {
+  height: 40px;
+  width: 40px;
+}
+
+.icon-button-container {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+}

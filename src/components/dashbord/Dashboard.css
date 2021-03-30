@@ -1,19 +1,9 @@
 .dash-container {
-  margin-left: 250px;
-  background-color: #F4F7FA;
+  margin-top: -60px;
+  margin-left: 220px;
+  background-color: #f4f7fa;
   height: 100vh;
-}
-#topItems {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
-
-#contentDash {
-  display: flex;
-  flex-direction: row;
-  flex-flow: wrap;
-  height: 900px;
-}
-

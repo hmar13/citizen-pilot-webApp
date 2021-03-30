@@ -19,3 +19,11 @@ export type proposal = {
   approved: boolean;
   userId: number;
 };
+
+export type project = {
+  title: string;
+  description: string;
+  location: string;
+  completion: number;
+  image: string;
+};
