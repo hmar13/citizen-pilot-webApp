@@ -74,13 +74,13 @@ function App() {
               />
             )}
           ></Route>
+            <Route exact path="/Login" component={SignIn}></Route>
+            <Route exact path="/Home" component={Dashboard}></Route>
         </Switch>
       </BrowserRouter>
       <div className="App">
         <BrowserRouter>
           <Switch>
-            <Route exact path="/Login" component={SignIn}></Route>
-            <Route exact path="/Home" component={Dashboard}></Route>
           </Switch>
         </BrowserRouter>
       </div>

@@ -8,6 +8,8 @@ import DashButton from './dashcontent/DashButtons';
 
 export default function Dashboard() {
   return (
-        <DashButton/>
+    <div className='dashContainer'>
+      <DashButton/>
+    </div>
   );
 }
