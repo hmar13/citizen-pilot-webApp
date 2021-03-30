@@ -7,7 +7,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Grid from '@material-ui/core/Grid';
 
 
-
 const useStyles = makeStyles((theme) => ({
   listItem: {
     padding: theme.spacing(1, 0),
@@ -50,7 +49,6 @@ export default function Overview({
 
         <ListItem className={classes.listItem} key='Title'>
           <ListItemText primary='Title' secondary={title}
-
           />
         </ListItem>
 
@@ -74,23 +72,10 @@ export default function Overview({
           <ListItemText primary='Date' secondary={date} />
         </ListItem>
 
-
-
-
       </List>
       <Grid container spacing={2}>
-
         <Grid item container xs={12} sm={10}>
-
-
-
-
-
           <Typography gutterBottom>Please double-check your data and press submit to send your news story</Typography>
-
-
-
-
         </Grid>
       </Grid>
     </React.Fragment>

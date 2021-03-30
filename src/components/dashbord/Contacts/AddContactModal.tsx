@@ -3,7 +3,7 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import { IconButton } from '@material-ui/core';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
-import News from '../../News/News';
+import AddContact from './AddContact';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-export default function AddNewsModal() {
+export default function AddContactModal() {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
 
@@ -50,7 +50,7 @@ export default function AddNewsModal() {
         onClose={handleClose}
         aria-labelledby="news-modal"
       >
-        <News handleClose={handleClose} />
+        <AddContact handleClose={handleClose} />
       </Modal>
     </div>
   );

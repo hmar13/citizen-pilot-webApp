@@ -1,7 +1,0 @@
-.buttonContainer {
-  display: flex;
-  flex-flow: wrap row;
-  justify-content: space-evenly;
-  height: 100%;
-  margin: 25px;
-}

@@ -13,10 +13,7 @@ interface newsInterface {
   selectedCategory: string;
   setCategory: any;
   setLongDescription: any;
-
   setLocation: any;
-
-
   setdate: any;
 }
 
