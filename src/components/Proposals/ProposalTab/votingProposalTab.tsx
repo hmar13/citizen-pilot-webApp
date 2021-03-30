@@ -17,6 +17,7 @@ type props = {
 
 const useStyles = makeStyles({
   root: {
+    marginBottom: 20,
     maxWidth: 345,
     height: 420,
   },

@@ -1,5 +1,4 @@
 .page {
-  height: 100%;
   background: rgb(255, 255, 255);
   background: radial-gradient(
     circle,
@@ -31,9 +30,16 @@
 .newProposals {
   display: flex;
   flex-direction: column;
+  overflow-x: scroll;
 }
 
 .votingProposalContainer {
   display: flex;
   flex-direction: column;
+}
+
+.live-proposals {
+  overflow-y: scroll;
+
+  height: 70vh;
 }

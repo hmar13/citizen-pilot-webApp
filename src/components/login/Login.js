@@ -1,4 +1,4 @@
- import React from 'react';
+import React, { useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -12,6 +12,8 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import { fetchUser } from '../../store/actions/user';
+import { useDispatch } from "react-redux";
 
 
 
@@ -39,6 +41,24 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignIn() {
   const classes = useStyles();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const dispatch = useDispatch();
+
+  const handlePassword = (event) => {
+    setPassword(event.target.value);
+  };
+  const handleEmail = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    const action = await fetchUser(email, password);
+    await dispatch(action);
+    setPassword('');
+    setEmail('');
+  };
 
   return (
     <Container component="main" maxWidth="xs">
@@ -50,10 +70,11 @@ export default function SignIn() {
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <form className={classes.form} noValidate>
+        <form onSubmit={handleLogin} className={classes.form}>
           <TextField
             variant="outlined"
             margin="normal"
+            onChange={handleEmail}
             required
             fullWidth
             id="email"
@@ -64,6 +85,7 @@ export default function SignIn() {
           />
           <TextField
             variant="outlined"
+            onChange={handlePassword}
             margin="normal"
             required
             fullWidth
@@ -84,7 +106,7 @@ export default function SignIn() {
             color="primary"
             className={classes.submit}
           >
-              Sign In
+            Sign In
           </Button>
           <Grid container>
             <Grid item xs>

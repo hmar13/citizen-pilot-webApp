@@ -11,10 +11,11 @@ const MOCKDATA = [
     latitude: 44.78930726934227,
     longitude: 20.483746780551883,
     urgency: true,
-    image: 'img',
+    image:
+      'https://curiouscatontherun.files.wordpress.com/2013/10/krasnoyarsk-4.jpg',
     Fname: 'Corona',
     Lname: 'Bench',
-    email: 'corona@gmail',
+    email: 'corona@gmail.com',
   },
 
   {
@@ -24,10 +25,11 @@ const MOCKDATA = [
     longitude: 20.44972249719375,
 
     urgency: false,
-    image: 'img',
+    image:
+      'https://restorationmasterfinder.com/restoration/wp-content/uploads/2017/05/flooded-apartment-portland-or.jpg',
     Fname: 'Haydn',
     Lname: 'Ozzie',
-    email: 'haydn@gmail',
+    email: 'haydn@gmail.com',
   },
 ];
 
@@ -49,15 +51,11 @@ const Reports = () => {
 
   const [isClicked, setClicked] = useState(false);
 
-  const tabColor = {
-    backgroundColor: '#3d41d7',
-  };
-
   return (
     <div className="reports-container">
-      <div>
+      <div className="scroll-container">
         {MOCKDATA.map((report) => (
-          <div style={tabColor}>
+          <div className="tab">
             <ReportTab
               report={report}
               setClicked={setClicked}

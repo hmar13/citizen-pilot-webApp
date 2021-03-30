@@ -4,8 +4,7 @@ import { baseUrl } from '../config'
 export const fetchUserData = (username: string, password: string) =>
   fetch(`${baseUrl}/auth/login/user`, {
     method: 'POST',
-    credentials: 'include',
-    mode: 'cors',
+    mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password })
   })
@@ -28,8 +27,6 @@ interface registerInterface {
 export const registerEmployee = (user: registerInterface) =>
   fetch(`${baseUrl}/auth/empsignup`, {
     method: 'POST',
-    credentials: 'include',
-    mode: 'cors',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(user)
   })
