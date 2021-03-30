@@ -1,10 +1,22 @@
 .navbar {
-  height: 80px;
+  height: 100px;
   display: flex;
   justify-content: start;
   align-items: center;
 }
-
+.sideNavList {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: gold;
+}
+#sideNav {
+  background-color: gold;
+}
+#topItems {
+  background-color: gold;
+}
 .menu-bars {
   margin-left: 2rem;
   font-size: 2rem;
@@ -29,7 +41,7 @@
 
 .nav-text {
   display: flex;
-  justify-content: start;
+  justify-content: space-around;
   align-items: center;
   padding: 8px 0px 8px 16px;
   list-style: none;

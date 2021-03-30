@@ -5,7 +5,9 @@ export const fetchUserData = (username: string, password: string) =>
   fetch(`${baseUrl}/auth/login/user`, {
     method: 'POST',
     mode: 'no-cors',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+    },
     body: JSON.stringify({ username, password })
   })
     .then(res => res.status <= 401 ? res : Promise.reject(new Error('fail')))

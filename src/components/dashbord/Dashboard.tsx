@@ -6,16 +6,19 @@ import {
   createStyles,
 } from '@material-ui/core/styles';
 import './Dashboard.css';
-import DashButton from './dashcontent/DashButtons';
+
 import ReportTab from './Reports/reports';
 import ProjectTab from './Projects/projects';
 import LiveProposals from './LiveProposals/liveProposals';
+import ContactsComponent from './Contacts/ContactsComponent';
 export default function Dashboard() {
   return (
     <div className="dash-container">
       <ReportTab />
       <ProjectTab />
       <LiveProposals />
+
+      <ContactsComponent />
     </div>
   );
 }
