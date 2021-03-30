@@ -36,6 +36,17 @@ const MOCK_DATA_PROPOSALS = [
     approved: false,
     userId: 3,
   },
+  {
+    title: 'Something something',
+    description:
+      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ',
+    image:
+      'https://image.freepik.com/free-photo/park-bench-nature_19-115455.jpg',
+    location: 'City Center',
+    votes: 30,
+    approved: true,
+    userId: 2,
+  },
 ];
 
 function App() {
@@ -47,46 +58,49 @@ function App() {
   //   setProposals(MOCK_DATA_PROPOSALS);
   // }, [proposals]);
   return (
-    <BrowserRouter>
-      <SideNav />
-      <Switch>
-        {/* <Route exact path="/login" component={SignIn}></Route> */}
-        {/* <Route exact path="/home" component={Dashboard}></Route> */}
-        <Route exact path="/reports" component={Reports}></Route>
-        {/* <Route exact path="/contacts" component={Contacts}></Route> */}
-        <Route
-          exact
-          path="/projects"
-          render={(props) => (
-            <Projects
-              {...props}
-              setApprovedProposals={setApprovedProposals}
-              approvedProposals={approvedProposals}
-            />
-          )}
-        ></Route>
-        <Route
-          exact
-          path="/proposals"
-          render={(props) => (
-            <Proposals
-              {...props}
-              proposals={proposals}
-              setApprovedProposals={setApprovedProposals}
-              approvedProposals={approvedProposals}
-            />
-          )}
-        ></Route>
-        <Route
-          exact
-          path="/news"
-          render={(props) => (
-            <News />
-          )}
-        ></Route>
-        {/* <Route exact path="/activePolls" component={ActivePolls}></Route> */}
-      </Switch>
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <SideNav />
+        <Switch>
+          {/* <Route exact path="/login" component={SignIn}></Route> */}
+          {/* <Route exact path="/home" component={Dashboard}></Route> */}
+          <Route exact path="/reports" component={Reports}></Route>
+          {/* <Route exact path="/contacts" component={Contacts}></Route> */}
+          <Route
+            exact
+            path="/projects"
+            render={(props) => (
+              <Projects
+                {...props}
+                setApprovedProposals={setApprovedProposals}
+                approvedProposals={approvedProposals}
+              />
+            )}
+          ></Route>
+          <Route
+            exact
+            path="/proposals"
+            render={(props) => (
+              <Proposals
+                {...props}
+                proposals={proposals}
+                setApprovedProposals={setApprovedProposals}
+                approvedProposals={approvedProposals}
+              />
+            )}
+          ></Route>
+          {/* <Route exact path="/activePolls" component={ActivePolls}></Route> */}
+        </Switch>
+      </BrowserRouter>
+      <div className="App">
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/Login" component={SignIn}></Route>
+            <Route exact path="/Home" component={Dashboard}></Route>
+          </Switch>
+        </BrowserRouter>
+      </div>
+    </div>
   );
 }
 
