@@ -4,6 +4,7 @@ import * as AiIcons from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { SidebarData } from './navData';
 import './sideNav.css'
+import logo from '../assets/logo.png';
 import { IconContext } from 'react-icons';
 
 const sideNav = () => {
@@ -16,7 +17,7 @@ const sideNav = () => {
           </Link>
         </div>
         <nav className={ 'nav-menu active'}>
-          <h1 className='navTitle'>Citizen Pilot</h1>
+          <img className='logo' src={logo} alt={logo}/>
           <ul className='nav-menu-items'>
             {SidebarData.map((item, index) => {
               return (
