@@ -30,6 +30,3 @@ export function setLogin(isLoggedIn: boolean) {
     payload: isLoggedIn
   };
 }
-
-
-
