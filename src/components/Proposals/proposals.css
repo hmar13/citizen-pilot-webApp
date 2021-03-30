@@ -1,9 +1,45 @@
+.page {
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(219, 255, 235, 1) 37%,
+    rgba(241, 253, 255, 1) 100%
+  );
+}
+
 .proposal-container {
   display: flex;
   margin-left: 250px;
+  height: 800px;
 }
 
 .header-text {
   font-size: 45px;
+  font-weight: 400;
   margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.newProposalsContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 130px;
+}
+
+.newProposals {
+  display: flex;
+  flex-direction: column;
+  overflow-x: scroll;
+}
+
+.votingProposalContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.live-proposals {
+  overflow-y: scroll;
+
+  height: 70vh;
 }

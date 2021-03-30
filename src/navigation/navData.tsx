@@ -29,6 +29,18 @@ export const SidebarData = [
     cName: 'nav-text',
   },
   {
+    title: 'News',
+    path: '/news',
+    icon: <IoIcons.IoIosPaper />,
+    cName: 'nav-text',
+  },
+  {
+    title: 'Contacts',
+    path: '/contacts',
+    icon: <AiIcons.AiFillContacts />,
+    cName: 'nav-text',
+  },
+  {
     title: 'Log out',
     path: '/login',
     icon: <IoIcons.IoMdHelpCircle />,

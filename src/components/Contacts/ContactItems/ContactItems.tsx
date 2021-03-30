@@ -1,14 +1,16 @@
 import React from 'react'
 import './contact-items.css';
 
-interface contacts {
-  title: string;
-  phone: string;
-  email: string;
-  image: string;
+interface contactInterface {
+  contact: {
+    title: string,
+    phone: string,
+    email: string,
+    image: string,
+  }
 }
 
-const ContactItems:React.FC<contacts> = ( contact ) => {
+const ContactItems= ( { contact }: contactInterface) => {
   return (
     <div>
       <h1>{contact.title}</h1>
