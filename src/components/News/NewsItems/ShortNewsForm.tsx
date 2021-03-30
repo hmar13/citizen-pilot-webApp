@@ -37,6 +37,7 @@ export default function ShortNewsForm({
         <Grid item xs={12} >
           <TextField
             onChange={handleImageChange}
+            required
             id="image"
             label="Add an image url"
             fullWidth

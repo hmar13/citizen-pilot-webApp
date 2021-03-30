@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { proposal } from './types';
@@ -49,48 +49,50 @@ const MOCK_DATA_PROPOSALS = [
 ];
 
 function App() {
-  const [proposals, setProposals] = useState(MOCK_DATA_PROPOSALS);
+  const [proposals] = useState(MOCK_DATA_PROPOSALS);
   const [approvedProposals, setApprovedProposals] = useState<proposal[] | []>(
     []
-    );
-    // useEffect(() => {
-      //   setProposals(MOCK_DATA_PROPOSALS);
-      // }, [proposals]);
-      return (
-        <div>
+  );
+  // useEffect(() => {
+  //   setProposals(MOCK_DATA_PROPOSALS);
+  // }, [proposals]);
+  return (
+    <div>
       <BrowserRouter>
         <Switch>
-        <Route exact path="/" component={SignIn}></Route>
-            <>
-        <SideNav/>
-          <Route exact path="/reports" component={Reports}></Route>
-          <Route exact path="/contacts" component={Contacts}></Route>
-          <Route
-            exact
-            path="/projects"
-            render={(props) => (
-              <Projects
-              {...props}
-              setApprovedProposals={setApprovedProposals}
-              approvedProposals={approvedProposals}
-              />
+          <Route exact path="/" component={SignIn}></Route>
+          <>
+            <SideNav />
+            <Route exact path="/reports" component={Reports}></Route>
+            <Route exact path="/news" component={News}></Route>
+            <Route exact path="/contacts" component={Contacts}></Route>
+            <Route
+              exact
+              path="/projects"
+              render={(props) => (
+                <Projects
+                  {...props}
+                  setApprovedProposals={setApprovedProposals}
+                  approvedProposals={approvedProposals}
+                />
               )}
-          ></Route>
-          <Route
-            exact
-            path="/proposals"
-            render={(props) => (
-              <Proposals
-              {...props}
-              proposals={proposals}
-              setApprovedProposals={setApprovedProposals}
-              approvedProposals={approvedProposals}
-              />
+            ></Route>
+            <Route
+              exact
+              path="/proposals"
+              render={(props) => (
+                <Proposals
+                  {...props}
+                  proposals={proposals}
+                  setApprovedProposals={setApprovedProposals}
+                  approvedProposals={approvedProposals}
+                />
               )}
-          ></Route>
-          <Route exact path="/news" component={News}></Route>
+            ></Route>
+            <Route exact path="/Login" component={SignIn}></Route>
+            <Route exact path="/news" component={News}></Route>
             <Route exact path="/Home" component={Dashboard}></Route>
-         
+
           </>
         </Switch>
       </BrowserRouter>

@@ -28,6 +28,12 @@ export const SidebarData = [
     cName: 'nav-text',
   },
   {
+    title: 'Contacts',
+    path: '/contacts',
+    icon: <AiIcons.AiFillContacts />,
+    cName: 'nav-text',
+  },
+  {
     title: 'Log out',
     path: '/',
     cName: 'nav-text',
