@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
   headerDiv: {
     display: 'flex',
     justifyContent: 'space-between',
-    paddingRight: 15,
+
   },
   button: {
     padding: 0,

@@ -53,7 +53,6 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingRight: 15,
   }
 }));
 

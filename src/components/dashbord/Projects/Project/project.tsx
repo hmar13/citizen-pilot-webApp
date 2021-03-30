@@ -23,12 +23,12 @@ const Project: React.FC<props> = ({ project }) => {
   return (
     <div className="project-box">
       <div className="project-images">
-        <img src={image} alt="Project" />
+        <div className="progress-description">
+          <CircularProgressbar value={completion} text={`${completion}%`} />
+        </div>
+
       </div>
       <div className="title-description">{title}</div>
-      <div className="progress-description">
-        <CircularProgressbar value={completion} text={`${completion}%`} />
-      </div>
       <div className="icon-button-container">
         <IconButton className={classes.button}>
           <MoreVertIcon />

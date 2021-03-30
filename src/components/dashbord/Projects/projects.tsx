@@ -33,7 +33,7 @@ const ProjectTab = () => {
   return (
     <div className="Project-Tab">
       <div className="Project-tab-header-text-containter">
-        <div className="red-color-box"></div>
+        {/* <div className="red-color-box"></div> */}
         <p className="Project-tab-header-text">Projects</p>
       </div>
       <div>

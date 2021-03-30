@@ -44,7 +44,6 @@ const ReportTab = () => {
   return (
     <div className="Report-tab">
       <div className="Report-tab-header-text-containter">
-        <div className="blue-color-box"></div>
         <p className="Report-tab-header-text">Reports</p>
       </div>
       <div>
