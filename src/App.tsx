@@ -62,6 +62,7 @@ function App() {
         <SideNav/>
         <Switch>
           <Route exact path="/reports" component={Reports}></Route>
+          <Route exact path="/news" component={News}></Route>
           <Route exact path="/contacts" component={Contacts}></Route>
           <Route
             exact
