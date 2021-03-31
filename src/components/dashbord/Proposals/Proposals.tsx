@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../store/index';
 import {
   Box,
   Button,
@@ -16,38 +18,46 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+// import ProposalsViewDetails from './ProposalsItems/ProposalsViewDetails';
+
 
 const proposals = [
   {
-    id: 'her',
-    name: 'New cat cafe',
-    imageUrl: 'https://images.unsplash.com/photo-1602924097911-a78ca1af38c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1318&q=80',
-    updatedAt: '2 seconds ago'
+    id: '1',
+    title: 'New Benches in the park',
+    description:
+      'We should put more benches in the park as I think that is the best idea',
+    location: 'City Park',
+    image:
+      'https://image.freepik.com/free-photo/park-bench-nature_19-115455.jpg',
+    votes: 30,
+    approved: true,
+    userId: 1,
   },
   {
-    id: '34ölkbö',
-    name: 'Fountain in city park',
-    imageUrl: 'https://images.unsplash.com/photo-1592552373478-7fd02de5a789?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
-    updatedAt: '3 hours ago'
+    id: '2',
+    title: 'New Benches in the park',
+    description:
+      'We should put less benches in the park as I think that is the best idea',
+    location: 'City Park',
+    image:
+      'https://media.istockphoto.com/photos/beautiful-landscape-in-park-with-tree-and-green-grass-field-at-picture-id1021170914?k=6&m=1021170914&s=612x612&w=0&h=MbXPjMmkFVWiRYShvEaQ1ZWLoCw55f1mFu3p6fdZqhE=',
+    votes: 0,
+    approved: false,
+    userId: 3,
   },
   {
-    id: '34ökbö',
-    name: 'New benches all around town',
-    imageUrl: 'https://images.unsplash.com/photo-1525384648562-b9361aa73401?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8YmVuY2hlc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-    updatedAt: '2 days ago'
+    id: '3',
+    title: 'Something something',
+    description:
+      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ',
+    image:
+      'https://image.freepik.com/free-photo/park-bench-nature_19-115455.jpg',
+    location: 'City Center',
+    votes: 30,
+    approved: true,
+    userId: 2,
   },
-  {
-    id: '34ökbö',
-    name: 'Playground for young and old',
-    imageUrl: 'https://images.unsplash.com/photo-1575783970733-1aaedde1db74?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80',
-    updatedAt: '5 days ago'
-  },
-  {
-    id: '34ökbö',
-    name: 'New ice cream vendor in the park',
-    imageUrl: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
-    updatedAt: '6 days ago'
-  }
 ];
 
 const useStyles = makeStyles((theme) => ({
@@ -68,6 +78,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ProposalCard() {
   const classes = useStyles();
+  const allProposals = useSelector((state: RootState) => {
+    return state.realProposals;
+  });
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -76,6 +89,15 @@ export default function ProposalCard() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  // const handleViewDetails = (index: number) => {
+  //   return <ProposalsViewDetails
+  //     title={proposals[index].title}
+  //     description={proposals[index].description}
+  //     location={proposals[index].location}
+  //     image={proposals[index].image}
+  //   />
+  // }
 
   return (
     <Card className={classes.list}>
@@ -93,8 +115,8 @@ export default function ProposalCard() {
           >
             <ListItemAvatar>
               <img
-                alt={proposal.name}
-                src={proposal.imageUrl}
+                alt={proposal.title}
+                src={proposal.image}
                 style={{
                   height: 48,
                   width: 48,
@@ -103,8 +125,8 @@ export default function ProposalCard() {
               />
             </ListItemAvatar>
             <ListItemText
-              primary={proposal.name}
-              secondary={`Proposed ${proposal.updatedAt}`}
+              primary={proposal.title}
+              secondary={`Proposed ${proposal.location}`}
             />
             <IconButton
               onClick={handleClick}
@@ -150,4 +172,3 @@ export default function ProposalCard() {
   )
 
 };
-

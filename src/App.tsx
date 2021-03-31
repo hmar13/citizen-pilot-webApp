@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Provider as StoreProvider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import ReduxThunk from 'redux-thunk';
+import { reducers } from './store/index';
 import { proposal } from './types';
 // import Dashboard from './components/Dashboard/Dashboard';
 import Projects from './components/Projects/Projects';
@@ -11,6 +15,7 @@ import Proposals from './components/Proposals/Proposals';
 import Contacts from './components/Contacts/Contacts';
 import Dashboard from './components/dashbord/Dashboard';
 import SignIn from './components/login/Login';
+
 
 const MOCK_DATA_PROPOSALS = [
   {
@@ -48,6 +53,9 @@ const MOCK_DATA_PROPOSALS = [
   },
 ];
 
+const middleware = applyMiddleware(ReduxThunk);
+const store = createStore(reducers, middleware);
+
 function App() {
   const [proposals] = useState(MOCK_DATA_PROPOSALS);
   const [approvedProposals, setApprovedProposals] = useState<proposal[] | []>(
@@ -57,7 +65,7 @@ function App() {
   //   setProposals(MOCK_DATA_PROPOSALS);
   // }, [proposals]);
   return (
-    <div>
+    <StoreProvider store={store}>
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={SignIn}></Route>
@@ -96,7 +104,7 @@ function App() {
           </>
         </Switch>
       </BrowserRouter>
-    </div>
+    </StoreProvider>
   );
 }
 
