@@ -1,0 +1,27 @@
+.Project-Tab {
+  background-color: #fff;
+  width: 380px;
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+}
+
+.Project-tab-header-text-containter {
+  background: linear-gradient(-135deg, #899fd4 0%, #a389d4 100%);
+  border-bottom: 1px solid #F7FFF7;
+  color: white;
+  display: flex;
+  align-items: center;
+  height: 66px;
+  width: 380px;
+  font-size: 17px;
+  font-weight: 400;
+}
+.Project-tab-header-text {
+  margin-left: 20px;
+}
+
+.red-color-box {
+  background-color: #f44236;
+  width: 4px;
+  height: 20px;
+}

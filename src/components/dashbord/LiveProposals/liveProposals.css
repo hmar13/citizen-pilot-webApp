@@ -1,0 +1,12 @@
+.proposal-Container-box {
+  height: 370px;
+  width: 760px;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.boxy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

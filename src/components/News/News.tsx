@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
 const steps = ['Description', 'Meta Details', 'Review your news story'];
 
 
-export default function News() {
+export default function News({ handleClose }: any) {
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
 
@@ -134,7 +134,7 @@ export default function News() {
       <main className={classes.layout}>
         <Paper className={classes.paper}>
           <Typography component="h1" variant="h4" align="center">
-            Create News Story
+            Create a news story
           </Typography>
           <Stepper activeStep={activeStep} className={classes.stepper}>
             {steps.map((label) => (
@@ -152,11 +152,17 @@ export default function News() {
                 <Typography variant="subtitle1">
                   Your story has been added to the news and will be published in the Citizen Pilot App momentarily.
                 </Typography>
+                <Button onClick={handleClose} className={classes.button}>
+                  Back
+                </Button>
               </React.Fragment>
             ) : (
               <React.Fragment>
                 {getStepContent(activeStep)}
                 <div className={classes.buttons}>
+                  <Button onClick={handleClose} className={classes.button}>
+                    Cancel
+                    </Button>
                   {activeStep !== 0 && (
                     <Button onClick={handleBack} className={classes.button}>
                       Back

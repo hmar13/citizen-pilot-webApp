@@ -4,7 +4,10 @@ import { baseUrl } from '../config'
 export const fetchUserData = (username: string, password: string) =>
   fetch(`${baseUrl}/auth/login/user`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    mode: 'no-cors',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+    },
     body: JSON.stringify({ username, password })
   })
     .then(res => res.status <= 400 ? res : Promise.reject(new Error('fail')))

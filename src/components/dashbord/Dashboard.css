@@ -1,21 +1,37 @@
-.dashContainer {
-  display: flex;
-  flex-flow: wrap row;
-  height: 100%;
-  width: 70%;
-  margin-left: 300px;
+.banner {
+  height: 80px;
+  width: 2000px;
+  background-color: lightgrey;
+  margin-right: -10px;
+  margin-left: -10px;
 }
 
-#topItems {
+.dash-container {
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: #f4f7fa;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: space-between;
-  height: 100%;
+  align-items: baseline;
 }
 
-#contentDash {
+.content-container {
+  background-color: #f4f7fa;
+  height: 100vh;
   display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.top-container {
   flex-direction: row;
-  flex-flow: wrap;
-  height: 900px;
+}
+
+.last-row {
+  display: flex;
+  align-items: center;
 }

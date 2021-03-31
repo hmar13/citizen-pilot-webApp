@@ -1,4 +1,4 @@
-import React, { useState, SetStateAction } from 'react';
+import React, { SetStateAction } from 'react';
 import './ReportTab.css';
 import { report } from '../../../types';
 import useClipboard from 'react-use-clipboard';
