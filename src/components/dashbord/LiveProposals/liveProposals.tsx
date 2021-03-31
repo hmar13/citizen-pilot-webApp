@@ -1,6 +1,8 @@
 import React from 'react';
 import './liveProposals.css';
 import Proposal from './Proposal/proposal';
+// import ProgressBar from 'react-bootstrap/ProgressBar';
+
 const MOCK_DATA_PROPOSALS = [
   {
     title: 'New Benches in the park',
@@ -9,7 +11,7 @@ const MOCK_DATA_PROPOSALS = [
     location: 'City Park',
     image:
       'https://image.freepik.com/free-photo/park-bench-nature_19-115455.jpg',
-    votes: 30,
+    votes: 500,
     approved: true,
     userId: 1,
   },

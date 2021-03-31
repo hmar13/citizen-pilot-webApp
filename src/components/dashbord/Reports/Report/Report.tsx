@@ -10,7 +10,8 @@ type props = {
 
 const useStyles = makeStyles({
   button: {
-    background: 'linear-gradient(-135deg, #899FD4 0%, #A389D4 100%)',
+    background:
+      'linear-gradient(90deg, rgba(91,164,252,1) 0%, rgba(58,66,118,1) 100%)',
     height: '25px',
     width: '32px',
     borderRadius: '15px',

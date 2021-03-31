@@ -1,9 +1,14 @@
 .proposal-box {
   font-family: 'Open Sans', sans-serif;
   margin-left: 20px;
-  height: 280px;
-  width: 300px;
-  background: linear-gradient(-135deg, #899fd4 0%, #a389d4 100%);
+  height: 37vh;
+  width: 18vw;
+  background: rgb(58, 66, 118);
+  background: linear-gradient(
+    90deg,
+    rgba(58, 66, 118, 1) 0%,
+    rgba(91, 164, 252, 1) 100%
+  );
   border-radius: 5px;
 }
 
@@ -26,7 +31,7 @@
   margin-left: 20px;
   display: flex;
   width: 200px;
-  height: 40px;
+  height: 4vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -39,12 +44,13 @@
 }
 
 .proposal-description {
-  width: 250px;
-  height: 100px;
+  width: 16vw;
+  height: 9vh;
   margin-top: 30px;
   margin-left: 20px;
   color: white;
   font-weight: 300;
+  font-size: 13px;
 }
 
 .vote-icon {
@@ -54,20 +60,36 @@
 .votes-and-button {
   margin-top: 30px;
   display: flex;
-  width: 300px;
+  width: 18vw;
   justify-content: space-between;
   align-items: center;
 }
 
 .votes {
   display: flex;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 .votes-text {
   margin-top: 5px;
   margin-left: 5px;
   color: whitesmoke;
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.linear-progress-bar {
+  width: 11vw;
+}
+
+.votes-and-the-bar {
+  display: flex;
+  margin-left: 20px;
+  align-items: center;
+}
+
+.button-box {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8vh;
 }

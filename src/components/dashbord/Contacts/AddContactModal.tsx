@@ -5,7 +5,6 @@ import { IconButton } from '@material-ui/core';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import AddContact from './AddContact';
 
-
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     paper: {
@@ -18,8 +17,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     button: {
       paddingTop: 15,
-    }
-  }),
+    },
+  })
 );
 
 export default function AddContactModal() {
@@ -34,7 +33,6 @@ export default function AddContactModal() {
     setOpen(false);
   };
 
-
   return (
     <div>
       <IconButton
@@ -43,13 +41,9 @@ export default function AddContactModal() {
         edge="end"
         size="small"
       >
-        <AddCircleIcon style={{ color: '#5ba4fc', fontSize: 35 }} />
-      </IconButton >
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="news-modal"
-      >
+        <AddCircleIcon style={{ color: 'white', fontSize: 35 }} />
+      </IconButton>
+      <Modal open={open} onClose={handleClose} aria-labelledby="news-modal">
         <AddContact handleClose={handleClose} />
       </Modal>
     </div>

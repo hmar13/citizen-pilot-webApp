@@ -1,17 +1,17 @@
 .report-box {
-  margin-left: 30px;
+  margin-left: 1vw;
   border-bottom: 1px solid #f1f1f1;
   display: flex;
   align-items: center;
 
-  width: 570px;
+  width: 28vw;
   /* font-size: 17px;
   font-weight: 400; */
 }
 
 .description-box {
   height: 70px;
-  width: 320px;
+  width: 14vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,9 +51,9 @@
 }
 
 .category-text {
-  width: 120px;
+  width: 7vw;
   margin-left: 10px;
   color: #888;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 11px;
 }

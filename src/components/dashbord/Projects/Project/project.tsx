@@ -10,23 +10,22 @@ type props = {
   project: project;
 };
 
-
 const useStyles = makeStyles(() => ({
   button: {
-    width: 50, padding: 0,
-  }
+    width: 80,
+    padding: 0,
+  },
 }));
 
 const Project: React.FC<props> = ({ project }) => {
   const { title, description, location, completion, image } = project;
-  const classes = useStyles()
+  const classes = useStyles();
   return (
     <div className="project-box">
       <div className="project-images">
         <div className="progress-description">
           <CircularProgressbar value={completion} text={`${completion}%`} />
         </div>
-
       </div>
       <div className="title-description">{title}</div>
       <div className="icon-button-container">
@@ -34,7 +33,7 @@ const Project: React.FC<props> = ({ project }) => {
           <MoreVertIcon />
         </IconButton>
       </div>
-    </div >
+    </div>
   );
 };
 
