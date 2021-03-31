@@ -34,13 +34,15 @@ interface proposalInterface {
 const useStyles = makeStyles((theme) => ({
   list: {
     width: 380,
+    height: 370,
+    overflowY: "scroll",
   },
   button: {
     padding: 0,
     width: 50,
   },
   header: {
-    background: 'linear-gradient(-135deg, #899fd4 0%, #a389d4 100%)',
+    background: 'linear-gradient(90deg, rgba(91,164,252,1) 0%, rgba(58,66,118,1) 100%)',
     color: 'white',
   }
 }));

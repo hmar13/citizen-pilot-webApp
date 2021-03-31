@@ -9,6 +9,8 @@ import ProposalsItems from './ProposalsItems/ProposalsItems';
 const useStyles = makeStyles((theme) => ({
   list: {
     width: 380,
+    height: 370,
+    overflowY: "scroll",
   },
 }));
 
