@@ -30,9 +30,11 @@ export default function Dashboard() {
         <ContactsComponent />
         <ReportTab />
 
+        <div className="last-row">
+          <ProjectTab />
+          <LiveProposals />
 
-        <ProjectTab />
-        <LiveProposals />
+        </div>
 
       </div>
     </div>

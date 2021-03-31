@@ -30,3 +30,8 @@
 .top-container {
   flex-direction: row;
 }
+
+.last-row {
+  display: flex;
+  align-items: center;
+}
