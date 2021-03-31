@@ -12,26 +12,22 @@
   background-color: #f4f7fa;
   height: 100vh;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  align-items: baseline;
 }
 
 .content-container {
   background-color: #f4f7fa;
   height: 100vh;
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
 }
 
-.top-container {
-  flex-direction: row;
-}
-
 .last-row {
+  width: 10vw;
+  height: 100vh;
   display: flex;
   align-items: center;
 }

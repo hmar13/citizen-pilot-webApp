@@ -7,7 +7,6 @@ import ReportTab from './Reports/reports';
 import ProjectTab from './Projects/projects';
 import LiveProposals from './LiveProposals/liveProposals';
 
-
 // TODO: Add logo
 // TODO: same font everywhere
 // TODO: make all box headers same color
@@ -17,14 +16,12 @@ import LiveProposals from './LiveProposals/liveProposals';
 // TODO: live proposals, have little image where it says city park,OR graph/status bar underneath the text
 // TODO: Add modals
 
-
 export default function Dashboard() {
   return (
     <div className="dash-container">
-      <div className="banner">
-      </div>
-      <div className="content-container">
+      <div className="banner"></div>
 
+      <div className="content-container">
         <NewsComponent />
         <ProposalCard />
         <ContactsComponent />
@@ -33,9 +30,7 @@ export default function Dashboard() {
         <div className="last-row">
           <ProjectTab />
           <LiveProposals />
-
         </div>
-
       </div>
     </div>
   );
