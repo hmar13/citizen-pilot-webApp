@@ -52,8 +52,17 @@ const proposals = [
 
 const useStyles = makeStyles((theme) => ({
   list: {
-    width: 550,
+    width: 380,
+
   },
+  button: {
+    padding: 0,
+    width: 50,
+  },
+  header: {
+    background: 'linear-gradient(-135deg, #899fd4 0%, #a389d4 100%)',
+    color: 'white',
+  }
 }));
 
 
@@ -69,9 +78,9 @@ export default function ProposalCard() {
   };
 
   return (
-
     <Card className={classes.list}>
       <CardHeader
+        className={classes.header}
         subtitle={`${proposals.length} in total`}
         title="Proposal Inbox"
       />
@@ -101,6 +110,7 @@ export default function ProposalCard() {
               onClick={handleClick}
               edge="end"
               size="small"
+              className={classes.button}
             >
               <MoreVertIcon />
             </IconButton >

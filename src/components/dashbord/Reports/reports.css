@@ -1,5 +1,5 @@
 .Report-tab {
-  margin-left: 30px;
+
   background-color: #fff;
   width: 600px;
   font-family: 'Open Sans', sans-serif;
@@ -7,9 +7,11 @@
 }
 .Report-tab-header-text-containter {
   border-bottom: 1px solid #f1f1f1;
+  background: linear-gradient(-135deg, #899fd4 0%, #a389d4 100%);
+  color: white;
   display: flex;
   align-items: center;
-  height: 50px;
+  height: 66px;
   width: 600px;
   font-size: 17px;
   font-weight: 400;

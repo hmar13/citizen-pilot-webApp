@@ -4,24 +4,19 @@
   display: flex;
   align-items: center;
   height: 70px;
-  width: 570px;
+  width: 490px;
 }
 
 .project-images {
-  height: 70px;
-  width: 70px;
+  margin-left: -15px;
+  width: 60px;
   display: flex;
-  justify-self: center;
+  justify-self: flex-start;
   align-items: center;
-}
-img {
-  height: 50px;
-  width: 50px;
-  border-radius: 10px;
 }
 
 .title-description {
-  width: 320px;
+  width: 240px;
   font-size: 15px;
   color: #111;
   font-weight: 400;
@@ -33,10 +28,9 @@ img {
 }
 
 .icon-button-container {
-  width: 70px;
   height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 30px;
+
 }

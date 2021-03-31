@@ -34,19 +34,19 @@ const news = [
   },
   {
     id: '34ökbö',
-    name: 'Upcoming election, vote this Sunday',
+    name: 'Upcoming election!',
     imageUrl: 'https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
     updatedAt: '2 days ago'
   },
   {
     id: '34ökbö',
-    name: 'New bin schedule taking place in 2 weeks time',
-    imageUrl: 'https://images.unsplash.com/photo-1545303234-a34381f8b5cf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=684&q=80',
-    updatedAt: '5 days ago'
+    name: 'New app: Tinder for Cows',
+    imageUrl: 'https://i.imgur.com/WDcO19j.png',
+    updatedAt: '6 days ago'
   },
   {
     id: '34ökbö',
-    name: 'New app coming soon: Tinder for Cows',
+    name: 'Train service interrupted',
     imageUrl: 'https://i.imgur.com/WDcO19j.png',
     updatedAt: '6 days ago'
   }
@@ -54,12 +54,23 @@ const news = [
 
 const useStyles = makeStyles((theme) => ({
   list: {
-    width: 550,
+    width: 380,
+
   },
   headerDiv: {
     display: 'flex',
     justifyContent: 'space-between',
-    paddingRight: 15,
+
+  },
+  button: {
+    padding: 0,
+    width: 50,
+  },
+  titleDescription: {
+    width: 280,
+    fontSize: 15,
+    color: '#111',
+    fontWeight: 400,
   }
 }));
 
@@ -82,6 +93,7 @@ export default function NewsComponent() {
         <CardHeader
           subtitle={`${news.length} in total`}
           title="Latest news"
+          className={classes.titleDescription}
         />
         <AddNewsModal />
       </div>
@@ -111,6 +123,7 @@ export default function NewsComponent() {
               onClick={handleClick}
               edge="end"
               size="small"
+              className={classes.button}
             >
               <MoreVertIcon />
             </IconButton >

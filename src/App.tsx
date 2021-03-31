@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { proposal } from './types';
 // import Dashboard from './components/Dashboard/Dashboard';
 import Projects from './components/Projects/Projects';
-import SideNav from './navigation/sideNav';
+// import SideNav from './navigation/sideNav';
 import Reports from './components/Reports/Reports';
 import News from './components/News/News';
 import Proposals from './components/Proposals/Proposals';
@@ -62,7 +62,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={SignIn}></Route>
           <>
-            <SideNav />
+            {/* <SideNav /> */}
             <Route exact path="/reports" component={Reports}></Route>
             <Route exact path="/news" component={News}></Route>
             <Route exact path="/contacts" component={Contacts}></Route>

@@ -30,7 +30,6 @@ export const SidebarData = [
   {
     title: 'Contacts',
     path: '/contacts',
-    icon: <AiIcons.AiFillContacts />,
     cName: 'nav-text',
   },
   {
