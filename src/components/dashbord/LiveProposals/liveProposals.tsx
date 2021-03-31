@@ -3,34 +3,34 @@ import './liveProposals.css';
 import Proposal from './Proposal/proposal';
 const MOCK_DATA_PROPOSALS = [
   {
-    title: 'New Benches in the park',
+    title: 'Build more benches along the broadwater',
     description:
-      'We should put more benches in the park as I think that is the best idea',
-    location: 'City Park',
+      'Currently a proposal has been made to build more benches along the broadwater in Mermaid Beach. This would include one for every 25m along the beach.',
+    location: 'Mermaid Beach',
     image:
-      'https://image.freepik.com/free-photo/park-bench-nature_19-115455.jpg',
+      'https://images.unsplash.com/photo-1444492417251-9c84a5fa18e0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80',
     votes: 30,
     approved: true,
     userId: 1,
   },
   {
-    title: 'New Benches in the park',
+    title: 'Renovate Main Street pavements',
     description:
-      'We should put less benches in the park as I think that is the best idea',
-    location: 'City Park',
+      'The pavements on Main street are believed to be in disrepair and a proposal has been made to fix its current state.',
+    location: 'Main Street, City Park',
     image:
-      'https://media.istockphoto.com/photos/beautiful-landscape-in-park-with-tree-and-green-grass-field-at-picture-id1021170914?k=6&m=1021170914&s=612x612&w=0&h=MbXPjMmkFVWiRYShvEaQ1ZWLoCw55f1mFu3p6fdZqhE=',
-    votes: 0,
+      'https://images.unsplash.com/photo-1584696049838-8e692282a2e6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80',
+    votes: 1,
     approved: true,
     userId: 3,
   },
   {
-    title: 'Something something',
+    title: 'Release the Snyder Cut 2',
     description:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ',
+      'With Justice League, the Snyder Cut, having just become available, we are petitioning to see if DC Comics will film their next installment on the Gold Coast.',
     image:
-      'https://image.freepik.com/free-photo/park-bench-nature_19-115455.jpg',
-    location: 'City Center',
+      'https://images.unsplash.com/photo-1497124401559-3e75ec2ed794?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80',
+    location: 'Gold Coast',
     votes: 30,
     approved: true,
     userId: 2,

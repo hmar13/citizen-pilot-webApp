@@ -4,28 +4,36 @@ import Project from './Project/project';
 
 const MOCKDATA = [
   {
-    title: 'New School in the village',
-    description: 'We ar ebuilding a new school in the village for 300 students',
-    location: 'Second Biggest Village',
+    title: 'Roadworks on the M3 Motorway',
+    description: 'Currently there a significant roadworks being completed on the M3 Motorway between exits 49 and 54 with an expected completion time of June 2021',
+    location: 'M3 Exits 49 to 54',
     completion: 30,
     image:
-      'https://static01.nyt.com/images/2010/05/06/nyregion/06newschool-1/06newschool-1-popup.jpg?quality=75&auto=webp&disable=upscale',
+      'https://images.unsplash.com/photo-1612878100556-032bbf1b3bab?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
   },
   {
-    title: 'New Park in the abandoned area',
-    description: 'We are builing in new park in the city with 300 trees',
-    location: 'Old town',
+    title: 'New playground in Southport',
+    description: 'Southport will be the destination for a brand new childrens playground for ages 4+',
+    location: '14 Herry Street, Southport',
     completion: 40,
     image:
-      'https://cdn1.vectorstock.com/i/1000x1000/40/15/city-public-park-or-square-object-3d-isometric-vector-20814015.jpg',
+      'https://images.unsplash.com/photo-1586250127208-8218b38ff1cd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
   },
   {
-    title: 'New sewage system in town',
-    description: 'Renovating the sewage system',
-    location: 'City',
+    title: 'Smart City Application Rollout',
+    description: 'The city has ordered a smart city mobile application with Citizen Pilot developers with the testing rollout expected to happen in August 2021',
+    location: 'Gold Coast',
     completion: 20,
     image:
-      'https://www.thenewsminute.com/sites/default/files/styles/news_detail/public/sewage-treartment-plant-bengaluru_0.jpeg?itok=Tdj7LiNW',
+      'https://images.unsplash.com/photo-1558655146-364adaf1fcc9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    title: 'Honouring Corona Laufer',
+    description: 'In regards to Corona Laufers recent achievements of donating multiple benches to the city, we are building the worlds largest bench on the Broadwater in Main Beach',
+    location: '143 Surf Parade, Main Beach',
+    completion: 80,
+    image:
+      'https://images.unsplash.com/photo-1561326598-8e19291f9c7b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
   },
 ];
 
