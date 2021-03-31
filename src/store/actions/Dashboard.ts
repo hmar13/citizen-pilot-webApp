@@ -54,7 +54,6 @@ export const setContacts = (contacts: []) => ({
 
 //Proposals
 export function fetchProposals() {
-  console.log('HERE');
   return function (dispatch: Dispatch) {
     getProposals()
       .then((proposals: []) => {

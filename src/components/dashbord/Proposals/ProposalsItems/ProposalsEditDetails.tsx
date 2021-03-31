@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const ProposalsViewDetails = ( { proposal, setAnchorEl }: proposal) => {
+const ProposalsEditDetails = ( { proposal, setAnchorEl }: proposal) => {
   const classes = useStyles();
   const [open, setOpen] = useState(true);
 
@@ -65,9 +65,9 @@ const ProposalsViewDetails = ( { proposal, setAnchorEl }: proposal) => {
 
   return (
     <div>
-      <MenuItem onClick={handleViewDetails}>View Details</MenuItem>
+      <MenuItem onClick={handleViewDetails}>Edit</MenuItem>
     </div>
   )
 }
 
-export default ProposalsViewDetails
+export default ProposalsEditDetails
