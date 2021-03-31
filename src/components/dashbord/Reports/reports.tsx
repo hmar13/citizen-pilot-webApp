@@ -27,8 +27,10 @@ const MOCKDATA = [
     email: 'haydnm@gmail.com',
   },
   {
+
     category: 'utilities',
     description: 'Power is out all along our street!',
+
     latitude: 44.78930726934227,
     longitude: 20.483746780551883,
     urgency: true,

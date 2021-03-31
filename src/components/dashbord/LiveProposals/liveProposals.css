@@ -1,8 +1,10 @@
 .proposal-Container-box {
-  height: 370px;
-  width: 760px;
+  /* background-color: darkmagenta; */
+  height: 43vh;
+  width: 42vw;
   display: flex;
   overflow-x: scroll;
+  margin-left: 4vw;
 }
 
 .boxy {

@@ -8,7 +8,7 @@ import {
   IconButton,
   List,
   ListItem,
-  ListItemText
+  ListItemText,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Menu from '@material-ui/core/Menu';
@@ -18,32 +18,32 @@ import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import AddContactModal from './AddContactModal';
 
-
 const contacts = [
   {
     id: '1',
     title: 'Library',
     email: 'library@library.com',
-    phone: '014620463'
+    phone: '014620463',
   },
   {
     id: '2',
     title: 'Police',
     email: 'police@serious.com',
-    phone: '0154020463'
+    phone: '0154020463',
   },
   {
     id: '3',
     title: 'Major',
     email: 'major@cityhall.com',
-    phone: '01540204lke'
+    phone: '01540204lke',
   },
-
 ];
 
 const useStyles = makeStyles((theme) => ({
   list: {
-    width: 380,
+    width: 300,
+    height: 370,
+    overflowY: 'scroll',
   },
   button: {
     padding: 0,
@@ -53,9 +53,13 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-  }
+    background:
+      'linear-gradient(90deg, rgba(91,164,252,1) 0%, rgba(58,66,118,1) 100%)',
+  },
+  titleDescription: {
+    color: 'white',
+  },
 }));
-
 
 export default function ProposalCard() {
   const classes = useStyles();
@@ -69,23 +73,19 @@ export default function ProposalCard() {
   };
 
   return (
-
     <Card className={classes.list}>
       <div className={classes.headerDiv}>
         <CardHeader
           subtitle={`${contacts.length} in total`}
-          title="Published Contacts"
+          title="Contacts"
+          className={classes.titleDescription}
         />
         <AddContactModal />
-
       </div>
       <Divider />
       <List className={classes.list}>
         {contacts.map((contact, i) => (
-          <ListItem
-            divider={i < contacts.length - 1}
-            key={contact.id}          >
-
+          <ListItem divider={i < contacts.length - 1} key={contact.id}>
             <ListItemText
               primary={contact.title}
               secondary={`Phone: ${contact.phone}`}
@@ -97,7 +97,7 @@ export default function ProposalCard() {
               className={classes.button}
             >
               <MoreVertIcon />
-            </IconButton >
+            </IconButton>
             <Menu
               id="choices"
               anchorEl={anchorEl}
@@ -109,7 +109,6 @@ export default function ProposalCard() {
               <MenuItem onClick={handleClose}>Edit</MenuItem>
               <MenuItem onClick={handleClose}>Delete</MenuItem>
             </Menu>
-
           </ListItem>
         ))}
       </List>
@@ -127,10 +126,8 @@ export default function ProposalCard() {
           variant="text"
         >
           View all
-      </Button>
+        </Button>
       </Box>
     </Card>
-  )
-
-};
-
+  );
+}

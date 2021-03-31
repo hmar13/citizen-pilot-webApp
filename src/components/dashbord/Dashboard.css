@@ -1,37 +1,63 @@
 .banner {
-  height: 80px;
-  width: 2000px;
-  background-color: lightgrey;
-  margin-right: -10px;
-  margin-left: -10px;
+  height: 8vh;
+  width: 100vw;
+  background: rgb(58, 66, 118);
+  background: linear-gradient(
+    90deg,
+    rgba(58, 66, 118, 1) 17%,
+    rgba(91, 164, 252, 1) 100%
+  );
+  display: flex;
+  /* justify-content: flex-end; */
+  align-items: center;
 }
 
 .dash-container {
-  margin-right: 10px;
-  margin-left: 10px;
+  width: 100vw;
   background-color: #f4f7fa;
   height: 100vh;
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  align-items: baseline;
+  flex-direction: column;
 }
 
-.content-container {
-  background-color: #f4f7fa;
-  height: 100vh;
+.content {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  padding-left: 1vw;
   justify-content: space-between;
 }
 
-.top-container {
-  flex-direction: row;
+.first-row {
+  padding-top: 2vh;
+  height: 48vh;
+  width: 65vw;
+  background-color: #f4f7fa;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .last-row {
+  background-color: #f4f7fa;
+  height: 44vh;
   display: flex;
   align-items: center;
+}
+
+.left-part {
+  display: flex;
+  flex-direction: column;
+  width: 65vw;
+}
+
+.report-tab-container {
+  height: 92vh;
+  padding-top: 2vh;
+  padding-right: 1vw;
+}
+
+.logo-pic {
+  margin-right: 1vw;
+  margin-top: 8px;
+  height: 150px;
+  width: 150px;
 }
