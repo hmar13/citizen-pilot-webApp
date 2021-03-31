@@ -18,6 +18,7 @@
 }
 
 .content-container {
+  padding-top: 20px;
   background-color: #f4f7fa;
   height: 100vh;
   display: flex;
